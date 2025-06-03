@@ -85,6 +85,27 @@ body {
   width: 100%;
 }
 
+#title {
+  text-align: center;
+}
+
+#description {
+  resize: none;
+  height: 100px;
+  width: 300px;
+  text-align: left;
+  padding: 10px 0 0 5px;
+}
+
+#description::placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  line-height: 90px;
+}
+
 .low {
   border-color: green;
 }
