@@ -57,3 +57,40 @@ body {
   align-items: center;
   gap: 10px;
 }
+
+/* // ********** Task Container ********** // */
+
+.addTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.addTask button {
+  background: none;
+  border: none;
+}
+
+.addIcon {
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#form {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  gap: 10px;
+  width: 100%;
+}
+
+.low {
+  border-color: green;
+}
+.medium {
+  border-color: orange;
+}
+.high {
+  border-color: red;
+}

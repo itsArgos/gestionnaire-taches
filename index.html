@@ -27,6 +27,39 @@
       </div>
     </section>
 
+    <!-- /* // ********** Task Container ********** // */ -->
+    <section class="task-container">
+      <div class="addTask">
+        <p>Ajouter une tâche</p>
+        <button id="onClickOpenForm">
+          <ion-icon class="addIcon" name="add-circle-outline"></ion-icon>
+        </button>
+      </div>
+
+      <form id="form" style="display: none">
+        <input type="text" id="title" placeholder="Titre" required />
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="date" id="deadline" required />
+        <select id="priority">
+          <option value="low">Basse</option>
+          <option value="medium">Moyenne</option>
+          <option value="high">Élevée</option>
+        </select>
+        <button id="submitForm" type="submit" class="submitButton">
+          Ajouter la tâche
+        </button>
+      </form>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <script src="app.js" defer></script>
   </body>
 </html>
