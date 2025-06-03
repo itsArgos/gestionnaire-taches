@@ -106,6 +106,14 @@ body {
   line-height: 90px;
 }
 
+select:invalid {
+  color: #757575;
+}
+
+select option {
+  color: #000;
+}
+
 .low {
   border-color: green;
 }

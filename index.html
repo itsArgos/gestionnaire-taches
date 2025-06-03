@@ -40,7 +40,8 @@
         <input type="text" id="title" placeholder="Titre" required />
         <textarea id="description" placeholder="Description"></textarea>
         <input type="date" id="deadline" required />
-        <select id="priority">
+        <select id="priority" required>
+          <option value="" disabled selected hidden>Priorité</option>
           <option value="low">Basse</option>
           <option value="medium">Moyenne</option>
           <option value="high">Élevée</option>
@@ -48,10 +49,12 @@
         <button id="submitForm" type="submit" class="submitButton">
           Ajouter la tâche
         </button>
-        <button id="closeForm" type="submit" class="closeButton">
+        <button id="closeForm" type="button" class="closeButton">
           Annuler
         </button>
       </form>
+
+      <ul id="taskList"></ul>
     </section>
 
     <script
