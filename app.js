@@ -16,6 +16,12 @@ closeForm.addEventListener("click", () => {
 
 // Au clique sur le bouton "Ajouter la tâche" empêche la page de recharger
 submitForm.addEventListener("click", (event) => {
+  // Si le formulaire est invalide, on affiche les champs requis
+  const formElement = document.getElementById("form");
+  if (!formElement.checkValidity()) {
+    return formElement.reportValidity();
+  }
+
   event.preventDefault();
 
   // Récuperation de la valeur de chaque champs du formulaire
