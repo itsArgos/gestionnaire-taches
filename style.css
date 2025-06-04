@@ -28,28 +28,19 @@ body {
   font-style: oblique;
 }
 
-.line-low {
-  height: 4px;
-  background-color: green;
-  width: 30px;
+.legend-low {
+  color: green;
   border: none;
-  margin: 0;
 }
 
-.line-medium {
-  height: 4px;
-  background-color: orange;
-  width: 30px;
+.legend-medium {
+  color: orange;
   border: none;
-  margin: 0;
 }
 
-.line-high {
-  height: 4px;
-  background-color: red;
-  width: 30px;
+.legend-hight {
+  color: red;
   border: none;
-  margin: 0;
 }
 
 .legend-item {
@@ -85,11 +76,11 @@ body {
   width: 100%;
 }
 
-#title {
+#title-form {
   text-align: center;
 }
 
-#description {
+#description-form {
   resize: none;
   height: 100px;
   width: 300px;
@@ -97,7 +88,7 @@ body {
   padding: 10px 0 0 5px;
 }
 
-#description::placeholder {
+#description-form::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,12 +105,19 @@ select option {
   color: #000;
 }
 
-.low {
-  border-color: green;
+.priority-icon {
+  font-size: 18px;
+  margin-left: 10px;
 }
-.medium {
-  border-color: orange;
+
+.priority-low {
+  color: green;
 }
-.high {
-  border-color: red;
+
+.priority-medium {
+  color: orange;
+}
+
+.priority-high {
+  color: red;
 }
