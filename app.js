@@ -38,6 +38,9 @@ submitForm.addEventListener("click", (event) => {
   const taskContent = document.createElement("span");
   taskContent.innerHTML = `<strong>${titleForm}</strong> - ${descriptionForm} - ${dateForm}`;
 
+  const iconsContainer = document.createElement("div");
+  iconsContainer.classList.add("icons-container");
+
   const priorityIcon = document.createElement("ion-icon");
   priorityIcon.setAttribute("name", "ellipse");
   priorityIcon.classList.add("priority-icon", `priority-${priorityForm}`);
@@ -52,9 +55,12 @@ submitForm.addEventListener("click", (event) => {
   });
 
   // Ajout des éléments dans le <li> puis dans la liste
+  iconsContainer.appendChild(priorityIcon);
+  iconsContainer.appendChild(icon);
+
   li.appendChild(taskContent);
-  li.appendChild(priorityIcon);
-  li.appendChild(icon);
+  li.appendChild(iconsContainer);
+
   taskList.appendChild(li);
 
   // Réinitialisation du formulaire àprès ajout de la tâche

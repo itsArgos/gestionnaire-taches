@@ -133,5 +133,17 @@ select option {
 }
 
 #taskList li {
-  padding: 0 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px 0 15px 0;
+  padding: 15px;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
