@@ -161,14 +161,16 @@ select:invalid {
 /* LISTE DES TÂCHES */
 
 #taskList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
   list-style: none;
   padding: 0;
 }
 
 #taskList li {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   background-color: #2a2a40;
@@ -187,10 +189,6 @@ select:invalid {
   word-break: break-word;
   overflow-wrap: break-word;
   margin: 0;
-}
-
-#taskList li strong {
-  text-align: center;
 }
 
 .priority-icon {
@@ -213,7 +211,7 @@ select:invalid {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 ion-icon[name="trash-outline"] {
