@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
+html,
 body {
+  margin: 0;
+  height: 100%;
+  background-color: #1e1e2f;
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
-  height: 100vh;
   font-family: "Nunito", sans-serif;
-  background-color: #1e1e2f;
   color: #ffffff;
+  width: 100%;
+  min-height: 100vh;
 }
 
 h1 {
@@ -66,7 +72,6 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-top: 1rem;
   gap: 1rem;
   color: #f0f0f0;
 }
@@ -156,22 +161,36 @@ select:invalid {
 /* LISTE DES TÂCHES */
 
 #taskList {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  margin-top: 40px;
   padding: 0;
 }
 
 #taskList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #2a2a40;
   border: 1px solid #3e3e5e;
   border-radius: 6px;
   margin: 20px 0;
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: #f0f0f0;
   box-shadow: 0 0 12px rgba(9, 163, 224, 0.3);
+}
+
+#taskList li p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+#taskList li strong {
+  text-align: center;
 }
 
 .priority-icon {
@@ -194,10 +213,14 @@ select:invalid {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 10px;
 }
 
 ion-icon[name="trash-outline"] {
-  color: #f44336;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #3e3e5e;
   cursor: pointer;
   transition: transform 0.2s;
 }

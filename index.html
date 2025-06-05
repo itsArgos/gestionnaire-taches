@@ -9,70 +9,72 @@
   </head>
 
   <body>
-    <h1>Gestionnaire de tâches</h1>
-    <!-- /* // ********** LEGEND ********** // */ -->
-    <section class="legend">
-      <h2>Légende Priorité</h2>
-      <div class="legend-item">
-        <ion-icon name="ellipse" class="legend-low"></ion-icon>
-        <span>Basse</span>
-      </div>
-      <div class="legend-item">
-        <ion-icon name="ellipse" class="legend-medium"></ion-icon>
-        <span>Moyenne</span>
-      </div>
-      <div class="legend-item">
-        <ion-icon name="ellipse" class="legend-hight"></ion-icon>
-        <span>Élevée</span>
-      </div>
-    </section>
-
-    <!-- /* // ********** Task Container ********** // */ -->
-    <section class="task-container">
-      <div class="addTask">
-        <p>Ajouter une tâche</p>
-        <button id="onClickOpenForm">
-          <ion-icon class="addIcon" name="add-circle-outline"></ion-icon>
-        </button>
-        <div class="select">
-          <select name="todos" class="filter-todo">
-            <option value="">Tous</option>
-            <option value="in-progress">En cours</option>
-            <option value="finished">Terminé</option>
-          </select>
+    <main>
+      <h1>Gestionnaire de tâches</h1>
+      <!-- /* // ********** LEGEND ********** // */ -->
+      <section class="legend">
+        <h2>Légende Priorité</h2>
+        <div class="legend-item">
+          <ion-icon name="ellipse" class="legend-low"></ion-icon>
+          <span>Basse</span>
         </div>
-      </div>
+        <div class="legend-item">
+          <ion-icon name="ellipse" class="legend-medium"></ion-icon>
+          <span>Moyenne</span>
+        </div>
+        <div class="legend-item">
+          <ion-icon name="ellipse" class="legend-hight"></ion-icon>
+          <span>Élevée</span>
+        </div>
+      </section>
 
-      <form id="form" style="display: none">
-        <input type="text" id="title-form" placeholder="Titre" required />
-        <textarea
-          id="description-form"
-          placeholder="Description"
-          required
-        ></textarea>
-        <input type="date" id="deadline-form" required />
-        <select id="priority-form" required>
-          <option value="" disabled selected hidden required>Priorité</option>
-          <option value="low">Basse</option>
-          <option value="medium">Moyenne</option>
-          <option value="high">Élevée</option>
-        </select>
-        <button id="submitForm" type="submit">Ajouter la tâche</button>
-        <button id="closeForm" type="button">Annuler</button>
-      </form>
+      <!-- /* // ********** Task Container ********** // */ -->
+      <section class="task-container">
+        <div class="addTask">
+          <p>Ajouter une tâche</p>
+          <button id="onClickOpenForm">
+            <ion-icon class="addIcon" name="add-circle-outline"></ion-icon>
+          </button>
+          <div class="select">
+            <select name="todos" class="filter-todo">
+              <option value="">Tous</option>
+              <option value="in-progress">En cours</option>
+              <option value="finished">Terminé</option>
+            </select>
+          </div>
+        </div>
 
-      <ul id="taskList"></ul>
-    </section>
+        <form id="form" style="display: none">
+          <input type="text" id="title-form" placeholder="Titre" required />
+          <textarea
+            id="description-form"
+            placeholder="Description"
+            required
+          ></textarea>
+          <input type="date" id="deadline-form" required />
+          <select id="priority-form" required>
+            <option value="" disabled selected hidden required>Priorité</option>
+            <option value="low">Basse</option>
+            <option value="medium">Moyenne</option>
+            <option value="high">Élevée</option>
+          </select>
+          <button id="submitForm" type="submit">Ajouter la tâche</button>
+          <button id="closeForm" type="button">Annuler</button>
+        </form>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+        <ul id="taskList"></ul>
+      </section>
 
-    <script src="app.js" defer></script>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+
+      <script src="app.js" defer></script>
+    </main>
   </body>
 </html>
