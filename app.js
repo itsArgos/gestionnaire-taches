@@ -65,4 +65,5 @@ submitForm.addEventListener("click", (event) => {
 
   // Réinitialisation du formulaire àprès ajout de la tâche
   form.reset();
+  form.style.display = "none";
 });

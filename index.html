@@ -34,11 +34,22 @@
         <button id="onClickOpenForm">
           <ion-icon class="addIcon" name="add-circle-outline"></ion-icon>
         </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="">Tous</option>
+            <option value="in-progress">En cours</option>
+            <option value="finished">Terminé</option>
+          </select>
+        </div>
       </div>
 
       <form id="form" style="display: none">
         <input type="text" id="title-form" placeholder="Titre" required />
-        <textarea id="description-form" placeholder="Description"></textarea>
+        <textarea
+          id="description-form"
+          placeholder="Description"
+          required
+        ></textarea>
         <input type="date" id="deadline-form" required />
         <select id="priority-form" required>
           <option value="" disabled selected hidden required>Priorité</option>
@@ -46,12 +57,8 @@
           <option value="medium">Moyenne</option>
           <option value="high">Élevée</option>
         </select>
-        <button id="submitForm" type="submit" class="submitButton">
-          Ajouter la tâche
-        </button>
-        <button id="closeForm" type="button" class="closeButton">
-          Annuler
-        </button>
+        <button id="submitForm" type="submit">Ajouter la tâche</button>
+        <button id="closeForm" type="button">Annuler</button>
       </form>
 
       <ul id="taskList"></ul>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 body {
   display: flex;
@@ -8,39 +8,32 @@ body {
   margin: 0;
   height: 100vh;
   font-family: "Nunito", sans-serif;
-  background: #f5f5f5;
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 /* // ********** LEGEND ********** // */
 
 .legend {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #fff;
+  background-color: #2a2a40;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #3e3e5e;
+  box-shadow: 0 0 12px rgba(9, 163, 224, 0.3);
 }
 
 .legend h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
   font-style: oblique;
-}
-
-.legend-low {
-  color: green;
-  border: none;
-}
-
-.legend-medium {
-  color: orange;
-  border: none;
-}
-
-.legend-hight {
-  color: red;
-  border: none;
 }
 
 .legend-item {
@@ -49,17 +42,33 @@ body {
   gap: 10px;
 }
 
+.legend-low {
+  color: #4caf50;
+}
+
+.legend-medium {
+  color: #ffc107;
+}
+
+.legend-hight {
+  color: #f44336;
+}
+
 /* // ********** Task Container ********** // */
 
 .task-container {
   width: 50%;
 }
 
+/* // ********** Ajout de tâches ********** // */
 .addTask {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 1rem;
+  gap: 1rem;
+  color: #f0f0f0;
 }
 
 .addTask button {
@@ -70,80 +79,129 @@ body {
 .addIcon {
   width: 30px;
   height: 50px;
+  color: #f0f0f0;
   cursor: pointer;
+  transition: transform 0.2s;
 }
+
+.addIcon:hover {
+  transform: scale(1.2);
+}
+
+/* // ********** Filtre ********** // */
+
+.select select {
+  background-color: #2a2a40;
+  color: #ffffff;
+  border: 1px solid #3e3e5e;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+/* // ********** Formulaire ********** // */
 
 #form {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   margin-top: 1rem;
   gap: 10px;
-  width: 100%;
+  background-color: #2a2a40;
+  border: 1px solid #3e3e5e;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(9, 163, 224, 0.3);
 }
 
-#title-form {
-  text-align: center;
+#form input,
+#form textarea,
+#form select {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  border: 1px solid #3e3e5e;
+  border-radius: 6px;
+  padding: 10px;
 }
 
 #description-form {
   resize: none;
   height: 100px;
-  text-align: left;
-  padding: 10px 0 0 5px;
 }
 
-#description-form::placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  line-height: 90px;
-}
-
+#description-form::placeholder,
+#title-form::placeholder,
 select:invalid {
-  color: #757575;
+  color: #aaa;
 }
 
-select option {
-  color: #000;
+#submitForm {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.priority-icon {
-  font-size: 18px;
-  margin-left: 10px;
+#closeForm {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.priority-low {
-  color: green;
-}
-
-.priority-medium {
-  color: orange;
-}
-
-.priority-high {
-  color: red;
-}
+/* LISTE DES TÂCHES */
 
 #taskList {
   list-style: none;
-  margin: 40px 0 0 0;
+  margin-top: 40px;
   padding: 0;
 }
 
 #taskList li {
+  background-color: #2a2a40;
+  border: 1px solid #3e3e5e;
+  border-radius: 6px;
+  margin: 20px 0;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 15px 0 15px 0;
-  padding: 15px;
+  color: #f0f0f0;
+  box-shadow: 0 0 12px rgba(9, 163, 224, 0.3);
+}
+
+.priority-icon {
+  font-size: 20px;
+}
+
+.priority-low {
+  color: #4caf50;
+}
+
+.priority-medium {
+  color: #ffc107;
+}
+
+.priority-high {
+  color: #f44336;
 }
 
 .icons-container {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
+}
+
+ion-icon[name="trash-outline"] {
+  color: #f44336;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+ion-icon[name="trash-outline"]:hover {
+  transform: scale(1.3);
 }
