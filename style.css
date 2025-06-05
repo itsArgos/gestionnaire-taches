@@ -127,9 +127,23 @@ h1 {
   padding: 10px;
 }
 
+#title-form {
+  text-align: center;
+}
+
+#title-form,
 #description-form {
-  resize: none;
   height: 100px;
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+#title-form::placeholder,
+#description-form::placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 #description-form::placeholder,
