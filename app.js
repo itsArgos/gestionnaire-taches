@@ -30,13 +30,17 @@ submitForm.addEventListener("click", (event) => {
   const dateForm = document.getElementById("deadline-form").value;
   const priorityForm = document.getElementById("priority-form").value;
 
+  // Formatage de la date en ordre FR -> JJ/MM/AAAA
+  const [year, month, day] = dateForm.split("-");
+  const frenchDate = `${day}/${month}/${year}`;
+
   // Création d'un nouvel élément <li>
   const li = document.createElement("li");
   const taskList = document.getElementById("taskList");
 
   // Création d'un "span" pour ajouter un icone de priorité à la suite
   const taskContent = document.createElement("p");
-  taskContent.innerHTML = `<strong>${titleForm}</strong> <p>${descriptionForm}</p> <p>${dateForm}</p>`;
+  taskContent.innerHTML = `<strong>${titleForm}</strong> <p>${descriptionForm}</p> <p>${frenchDate}</p>`;
 
   const iconsContainer = document.createElement("div");
   iconsContainer.classList.add("icons-container");
