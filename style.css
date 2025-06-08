@@ -90,8 +90,8 @@ h1 {
 }
 
 .addIcon:hover {
-  color: #22c55e;
   transform: scale(1.2);
+  color: #bb33ff;
 }
 
 /* // ********** Filtre ********** // */
@@ -107,6 +107,7 @@ h1 {
 /* // ********** Formulaire ********** // */
 
 #form {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   margin-top: 1rem;
@@ -160,7 +161,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #form select {
-  color: #a1a1aa;
+  color: #f4f4f4;
 }
 
 #submitForm {
@@ -226,6 +227,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 15px;
   color: #f4f4f4;
   box-shadow: 0 0 12px rgba(157, 0, 255, 0.5);
+  transition: 0.3s ease-in-out;
 }
 
 #taskList li p {
@@ -260,15 +262,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 15px;
 }
 
-ion-icon[name="trash-outline"] {
-  padding: 5px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: #333131;
-  cursor: pointer;
-  transition: transform 0.2s;
+.task-finished {
+  opacity: 0.6;
+  text-decoration: line-through;
+  font-style: italic;
 }
 
+ion-icon[name="create-outline"],
+ion-icon[name="checkmark-done-outline"],
+ion-icon[name="refresh-outline"],
+ion-icon[name="trash-outline"] {
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #333131;
+}
+
+ion-icon[name="create-outline"]:hover,
+ion-icon[name="checkmark-done-outline"]:hover,
+ion-icon[name="refresh-outline"]:hover,
 ion-icon[name="trash-outline"]:hover {
   transform: scale(1.3);
+  color: #9d00ff;
 }
