@@ -195,10 +195,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   border-radius: 6px;
   height: 40px;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  #submitForm {
+    width: 100%;
+  }
 }
 
 #submitForm:hover {
@@ -212,10 +219,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   border-radius: 6px;
   height: 40px;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  #closeForm {
+    width: 100%;
+  }
 }
 
 #closeForm:hover {

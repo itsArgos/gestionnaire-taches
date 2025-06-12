@@ -11,7 +11,7 @@
   <body>
     <main>
       <h1>Gestionnaire de tâches</h1>
-      <!-- /* // ********** LEGEND ********** // */ -->
+      <!-- /* // ********** LÉGENDE PRIORITÉ ********** // */ -->
       <section class="legend">
         <h2>Légende Priorité</h2>
         <div class="legend-item">
@@ -28,7 +28,7 @@
         </div>
       </section>
 
-      <!-- /* // ********** Task Container ********** // */ -->
+      <!-- /* // ********** CONTENEUR DE TÂCHES ********** // */ -->
       <section class="task-container">
         <div class="addTask">
           <p>Ajouter une tâche</p>
@@ -43,7 +43,7 @@
             </select>
           </div>
         </div>
-
+      <!-- /* // ********** FORMULAIRE ********** // */ -->
         <form id="form" style="display: none">
           <input type="text" id="title-form" placeholder="Titre" required />
           <input type="text"
@@ -53,7 +53,7 @@
           ></input>
           <input type="date" id="deadline-form" required />
           <select id="priority-form" required>
-            <option value="" disabled selected hidden required>Priorité</option>
+            <option value="" disabled selected hidden required>Priorité</option>•
             <option value="low">Basse</option>
             <option value="medium">Moyenne</option>
             <option value="high">Élevée</option>
@@ -64,7 +64,7 @@
 
         <ul id="taskList"></ul>
       </section>
-
+      <!-- /* // ********** SCRIPT ********** // */ -->
       <script
         type="module"
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
